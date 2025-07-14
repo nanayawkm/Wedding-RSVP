@@ -1197,6 +1197,11 @@ video {
   --tw-gradient-to: rgb(20 184 166 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-teal-400 {
+  --tw-gradient-from: #2dd4bf var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(45 212 191 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .via-purple-300 {
   --tw-gradient-to: rgb(216 180 254 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #d8b4fe var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1204,6 +1209,10 @@ video {
 .via-white {
   --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.via-purple-500 {
+  --tw-gradient-to: rgb(168 85 247 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #a855f7 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 .to-lilac-100 {
   --tw-gradient-to: #f3e8ff var(--tw-gradient-to-position);
@@ -1219,6 +1228,9 @@ video {
 }
 .to-teal-400 {
   --tw-gradient-to: #2dd4bf var(--tw-gradient-to-position);
+}
+.to-pink-400 {
+  --tw-gradient-to: #f472b6 var(--tw-gradient-to-position);
 }
 .object-contain {
   -o-object-fit: contain;

@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { BarChart3 } from 'lucide-react'
 
-export default function Admin() {
+function AdminContent() {
   const [isAuthorized, setIsAuthorized] = useState(false)
   const [passcode, setPasscode] = useState('')
   const [error, setError] = useState('')
@@ -131,5 +131,21 @@ export default function Admin() {
         </div>
       </section>
     </main>
+  )
+}
+
+export default function Admin() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen">
+        <div className="min-h-screen bg-gradient-to-br from-teal-400 via-purple-500 to-pink-400 flex items-center justify-center p-4">
+          <div className="bg-white/90 backdrop-blur-md rounded-xl p-8 shadow-xl border border-white/50 max-w-md w-full text-center">
+            <div className="text-xl font-headline mb-4">Loading...</div>
+          </div>
+        </div>
+      </main>
+    }>
+      <AdminContent />
+    </Suspense>
   )
 } 
