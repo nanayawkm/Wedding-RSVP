@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-lilac-600 hover:bg-lilac-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Dancing Script for all text */
+  .font-headline {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  .font-headline-light {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  .font-headline-bold {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .font-subheadline {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  .font-body {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 400;
+  }
+  
+  .font-body-medium {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 500;
+  }
+  
+  .font-elegant {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 600;
+  }
+  
+  .font-sans {
+    font-family: var(--font-dancing-script), cursive, 'Brush Script MT', 'Lucida Handwriting', fantasy;
+    font-weight: 400;
+  }
+  
+  .font-great-vibes {
+    font-family: var(--font-great-vibes), cursive, 'Dancing Script', 'Brush Script MT', fantasy;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  /* Optimized text effects - GPU accelerated */
+  .text-shimmer {
+    background: linear-gradient(45deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s ease-in-out infinite;
+    will-change: background-position;
+  }
+  
+  .text-glow {
+    text-shadow: 
+      0 0 10px rgba(255,255,255,0.6),
+      0 0 20px rgba(255,255,255,0.3),
+      1px 1px 4px rgba(0,0,0,0.5);
+    will-change: auto;
+  }
+  
+  .text-luxury {
+    text-shadow: 
+      0 0 8px rgba(255,255,255,0.8),
+      0 0 16px rgba(255,255,255,0.4),
+      1px 1px 4px rgba(0,0,0,0.6);
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+  }
+  
+  .text-ivory {
+    color: #FFF8DC; /* Soft ivory color */
+  }
+  
+  .text-gold {
+    color: #FFD700; /* Rich gold color */
+  }
+}
+
+/* Optimized animations - reduced complexity */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes subtleScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Lightweight hover effects */
+.romantic-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.romantic-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Enhanced names styling - clean without background shadows */
+.names-glow {
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    -1px -1px 1px rgba(255, 255, 255, 0.1);
+  will-change: auto;
+}
+
+/* Simplified gold gradient */
+.names-gold {
+  background: linear-gradient(45deg, #ffd700, #ffed4a, #fbbf24);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s ease-in-out infinite;
+  will-change: background-position;
+}
+
+/* Lightweight glassmorphism */
+.names-glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Optimized wedding badge */
+.wedding-badge-container {
+  animation: fadeInUp 1.5s ease-out, gentleFloat 8s ease-in-out infinite 2s;
+  will-change: transform;
+}
+
+.wedding-badge-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  opacity: 0.9;
+  animation: subtleScale 6s ease-in-out infinite;
+  will-change: transform;
+  aspect-ratio: 600/350;
+}
+
+.wedding-names {
+  padding: 1rem;
+  text-align: center;
+  animation: fadeInUp 2s ease-out 0.8s both;
+  will-change: transform, opacity;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer,
+  .names-gold,
+  .wedding-badge-container,
+  .wedding-badge-svg,
+  .wedding-names {
+    animation: none;
+  }
+  
+  .romantic-hover {
+    transition: none;
+  }
+  
+  .romantic-hover:hover {
+    transform: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .text-shimmer {
+    background-size: 150% 150%;
+    animation-duration: 5s;
+  }
+  
+  .names-glow {
+    text-shadow: 
+      2px 2px 3px rgba(0, 0, 0, 0.7),
+      -1px -1px 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .names-glass-box {
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+  }
+  
+  .wedding-badge-svg {
+    max-width: 500px;
+    animation-duration: 8s;
+    aspect-ratio: 500/292;
+  }
+  
+  .wedding-names {
+    padding: 0.5rem;
+  }
+  
+  /* Adjust text sizes for mobile 3-line layout */
+  .wedding-names div:first-child,
+  .wedding-names div:last-child {
+    font-size: 2.5rem !important;
+  }
+  
+  .wedding-names div:nth-child(2) {
+    font-size: 2rem !important;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  .wedding-badge-container {
+    animation-duration: 2s, 10s;
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 480px) {
+  .text-shimmer,
+  .names-gold {
+    animation: none;
+    background: #ffffff;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+  }
+  
+  .wedding-badge-container,
+  .wedding-badge-svg {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Further reduce text sizes for very small screens */
+  .wedding-names div:first-child,
+  .wedding-names div:last-child {
+    font-size: 2rem !important;
+  }
+  
+  .wedding-names div:nth-child(2) {
+    font-size: 1.75rem !important;
+  }
+  
+  .wedding-badge-svg {
+    max-width: 380px;
+    aspect-ratio: 380/222;
+  }
+} 
