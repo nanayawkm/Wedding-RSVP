@@ -51,7 +51,7 @@ export default function OurStory() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-teal-50 via-white to-lilac-50">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-headline-bold text-gray-900 mb-4">
               Our Story
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -78,7 +78,7 @@ export default function OurStory() {
                   {/* Content */}
                   <div className="flex-1 bg-white rounded-2xl shadow-lg p-8">
                     <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-2xl font-playfair font-bold text-gray-900">
+                      <h2 className="text-2xl font-headline-bold text-gray-900">
                         {section.title}
                       </h2>
                       <span className="text-lg font-semibold text-teal-600">
@@ -102,7 +102,7 @@ export default function OurStory() {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-              <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-headline-bold text-gray-900 mb-4">
                 Join Our Journey
               </h2>
               <p className="text-gray-600 mb-6">

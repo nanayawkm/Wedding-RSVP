@@ -56,8 +56,8 @@ export default function Countdown() {
 
   if (!isClient) {
     return (
-      <div className="bg-white/40 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
-        <h3 className="text-lg font-headline text-center text-white mb-3">
+      <div className="bg-white/50 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/60">
+        <h3 className="text-lg font-headline text-center elegant-hero-text-ivory mb-3">
           Counting Down to Our Special Day
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -75,8 +75,8 @@ export default function Countdown() {
   }
 
   return (
-    <div className="bg-white/40 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
-      <h3 className="text-lg font-headline text-center text-white mb-3">
+    <div className="bg-white/50 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/60">
+      <h3 className="text-lg font-headline text-center elegant-hero-text-ivory mb-3">
         Counting Down to Our Special Day
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

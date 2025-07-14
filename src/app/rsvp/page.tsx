@@ -6,7 +6,7 @@ export default function RSVP() {
         <div className="container-custom section-padding">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-headline-bold text-gray-900 mb-4">
                 Let us know if you're coming!
               </h1>
               <p className="text-xl text-gray-600">
@@ -16,9 +16,9 @@ export default function RSVP() {
             
             {/* Google Form Embed */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <div className="aspect-video w-full">
+              <div className="w-full" style={{ height: '800px' }}>
                 <iframe
-                  src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+                  src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
                   width="100%"
                   height="100%"
                   frameBorder="0"
@@ -26,18 +26,32 @@ export default function RSVP() {
                   marginWidth={0}
                   className="rounded-lg"
                   title="Wedding RSVP Form"
+                  loading="lazy"
                 >
-                  Loading…
+                  Loading RSVP form...
                 </iframe>
               </div>
-              <p className="text-center text-gray-500 mt-4 text-sm">
-                If the form doesn't load, please refresh the page or contact us directly.
-              </p>
+              <div className="mt-6 text-center">
+                <p className="text-gray-500 text-sm mb-4">
+                  If the form doesn't load properly, please try refreshing the page or use the direct link below.
+                </p>
+                <a 
+                  href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium underline"
+                >
+                  Open RSVP Form in New Tab
+                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
             
             {/* Additional Info */}
             <div className="mt-12 text-center">
-              <h2 className="text-2xl font-playfair font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-headline text-gray-900 mb-4">
                 Wedding Details
               </h2>
               <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">

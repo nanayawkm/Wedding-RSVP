@@ -12,7 +12,7 @@ export default function Thanks() {
               <div className="flex justify-center mb-6">
                 <PartyPopper className="w-16 h-16 text-teal-600" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-headline-bold text-gray-900 mb-6">
                 Thank You!
               </h1>
               <p className="text-xl text-gray-600 mb-8">

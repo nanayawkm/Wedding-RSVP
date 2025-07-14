@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Dancing_Script, Great_Vibes } from 'next/font/google'
+import { Montserrat, Great_Vibes } from 'next/font/google'
 import './globals.css'
 
-const dancingScript = Dancing_Script({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-dancing-script',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
 })
 
 const greatVibes = Great_Vibes({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dancingScript.variable} ${greatVibes.variable} font-dancing-script`}>
+      <body className={`${montserrat.variable} ${greatVibes.variable} font-montserrat`}>
         {children}
       </body>
     </html>
