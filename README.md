@@ -10,7 +10,7 @@ A beautiful, modern wedding website built with Next.js 14, TypeScript, and Tailw
 - **RSVP System**: Google Forms integration for easy RSVP management
 - **Photo Gallery**: Responsive image gallery with zoom functionality
 - **Our Story**: Timeline-based story section
-- **Admin Panel**: Protected admin area to view RSVP responses
+
 - **SEO Optimized**: Proper metadata and structured content
 
 ## 📋 Pages
@@ -20,7 +20,7 @@ A beautiful, modern wedding website built with Next.js 14, TypeScript, and Tailw
 3. **Thank You** (`/thanks`) - Confirmation page after RSVP
 4. **Our Story** (`/our-story`) - Timeline of the couple's journey
 5. **Gallery** (`/gallery`) - Photo gallery with modal view
-6. **Admin** (`/admin`) - Protected area to view RSVP responses
+
 
 ## 🚀 Getting Started
 
@@ -60,18 +60,7 @@ npm run dev
 src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
 ```
 
-### Google Sheets Integration
 
-1. Create a Google Sheet to collect RSVP responses
-2. Update the sheet URL in `src/app/admin/page.tsx`:
-```tsx
-href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit"
-```
-
-### Admin Access
-
-- **URL Method**: Access `/admin?pass=wedding2025`
-- **Form Method**: Enter passcode `wedding2025` on the admin page
 
 ## 🎨 Customization
 
@@ -136,7 +125,6 @@ Replace placeholder images in `src/app/gallery/page.tsx` with actual photos.
 
 ## 🔒 Security
 
-- Admin panel is protected with a passcode
 - No sensitive data is stored in the frontend
 - Google Forms handles all RSVP data securely
 
