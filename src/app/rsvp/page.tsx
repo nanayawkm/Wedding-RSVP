@@ -39,10 +39,10 @@ export default function RSVP() {
                   href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium underline"
+                  className="inline-flex items-center bg-lilac-500 hover:bg-lilac-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Open RSVP Form in New Tab
-                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>

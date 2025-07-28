@@ -26,8 +26,8 @@ export default function Countdown() {
     if (!isClient) return
 
     const calculateTimeLeft = (): TimeLeft => {
-      // Wedding date: August 5, 2025
-      const weddingDate = new Date('2025-08-05T00:00:00')
+      // Wedding date: Tuesday, August 5th, 2025 at 12:00 PM
+      const weddingDate = new Date('2025-08-05T12:00:00')
       const now = new Date()
       const difference = weddingDate.getTime() - now.getTime()
 
@@ -56,53 +56,48 @@ export default function Countdown() {
 
   if (!isClient) {
     return (
-      <div className="bg-white/50 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/60">
-        <h3 className="text-lg font-headline text-center elegant-hero-text-ivory mb-3">
+      <div className="text-center">
+        <h3 className="text-lg font-medium text-gray-700 mb-4 elegant-text-shadow">
           Counting Down to Our Special Day
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {['Days', 'Hours', 'Minutes', 'Seconds'].map((label) => (
-            <div key={label} className="text-center bg-white/30 rounded-lg p-3 border border-white/40">
-              <div className="text-2xl md:text-3xl font-headline-bold text-black">
-                --
+        <div className="flex justify-center mb-6">
+          <div className="relative w-48 h-48 bg-white shadow-lg rounded-full border-4 border-purple-200">
+            {/* Digital display in center */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-2xl font-mono font-bold text-gray-800">--:--:--</div>
+                <div className="text-sm text-gray-600">DAYS:HRS:MIN</div>
               </div>
-              <div className="text-xs text-black/80 font-body">{label}</div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="bg-white/50 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/60">
-      <h3 className="text-lg font-headline text-center elegant-hero-text-ivory mb-3">
+    <div className="text-center">
+      <h3 className="text-lg font-medium text-gray-700 mb-4 elegant-text-shadow">
         Counting Down to Our Special Day
       </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div className="text-center bg-white/30 rounded-lg p-3 border border-white/40">
-          <div className="text-2xl md:text-3xl font-headline-bold text-black">
-            {timeLeft.days}
+      <div className="flex justify-center mb-6">
+        <div className="relative w-48 h-48 bg-white shadow-lg rounded-full border-4 border-purple-200">
+          {/* Digital display in center */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-2xl font-mono font-bold text-gray-800">
+                {timeLeft.days.toString().padStart(2, '0')}:{timeLeft.hours.toString().padStart(2, '0')}:{timeLeft.minutes.toString().padStart(2, '0')}
+              </div>
+              <div className="text-sm text-gray-600">DAYS:HRS:MIN</div>
+            </div>
           </div>
-          <div className="text-xs text-black/80 font-body">Days</div>
-        </div>
-        <div className="text-center bg-white/30 rounded-lg p-3 border border-white/40">
-          <div className="text-2xl md:text-3xl font-headline-bold text-black">
-            {timeLeft.hours}
+          
+          {/* Seconds display */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-purple-400 rounded-full px-3 py-1">
+            <div className="text-xs font-mono font-bold text-white">
+              {timeLeft.seconds.toString().padStart(2, '0')}
+            </div>
           </div>
-          <div className="text-xs text-black/80 font-body">Hours</div>
-        </div>
-        <div className="text-center bg-white/30 rounded-lg p-3 border border-white/40">
-          <div className="text-2xl md:text-3xl font-headline-bold text-black">
-            {timeLeft.minutes}
-          </div>
-          <div className="text-xs text-black/80 font-body">Minutes</div>
-        </div>
-        <div className="text-center bg-white/30 rounded-lg p-3 border border-white/40">
-          <div className="text-2xl md:text-3xl font-headline-bold text-black">
-            {timeLeft.seconds}
-          </div>
-          <div className="text-xs text-black/80 font-body">Seconds</div>
         </div>
       </div>
     </div>

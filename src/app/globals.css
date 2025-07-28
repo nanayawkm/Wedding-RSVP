@@ -66,8 +66,8 @@
   }
   
   .font-elegant {
-    font-family: var(--font-montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif, 'Times New Roman', serif;
+    font-weight: 400;
   }
   
   .font-sans {
@@ -78,6 +78,49 @@
   .font-great-vibes {
     font-family: var(--font-great-vibes), cursive, 'Dancing Script', 'Brush Script MT', fantasy;
     font-weight: 400;
+  }
+  
+  .font-script {
+    font-family: 'Great Vibes', cursive, 'Dancing Script', 'Brush Script MT', fantasy;
+    font-weight: 400;
+  }
+  
+  /* Wedding stationery print-like effects */
+  .stationery-card {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      0 10px 25px -5px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid #f1e6dd;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stationery-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px, 40px 40px;
+    pointer-events: none;
+  }
+  
+  .elegant-text-shadow {
+    text-shadow: 
+      0 1px 2px rgba(0, 0, 0, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .print-like-border {
+    border: 1px solid #e8d5c4;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
   }
 }
 
