@@ -15,8 +15,8 @@ export default function RSVP() {
             </div>
             
             {/* Google Form Embed */}
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <div className="w-full" style={{ height: '800px' }}>
+            <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8">
+              <div className="w-full" style={{ height: '600px', minHeight: '400px' }}>
                 <iframe
                   src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
                   width="100%"
